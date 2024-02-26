@@ -1,8 +1,8 @@
 [
 	{
-		"id": 144,
+		"id": module_144,
 		"type": "module",
-		"slug": "144",
+		"slug": "module_144",
 		"detail": false,
 		"detail_template": "templates/blank_page",
 		"detail_default_layout": "default",
