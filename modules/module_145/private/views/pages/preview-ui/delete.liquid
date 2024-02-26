@@ -10,4 +10,8 @@ authorization_policies:
  - modules/siteglide_system/module_is_in_admin
 ---
 {%- include 'modules/siteglide_system/constants' -%}
-{%- include 'webapp_delete', layout: 'delete' -%}
+<div class="p-5">
+  <a href="/modules/module_145/preview-ui/index?auth={{params.auth}}" class="btn btn-primary">Back</a>
+  {%- include 'webapp_delete', layout: 'delete' -%}
+  <a href="/modules/module_145/preview-ui/index?auth={{params.auth}}" class="btn btn-primary">Cancel</a>
+</div>

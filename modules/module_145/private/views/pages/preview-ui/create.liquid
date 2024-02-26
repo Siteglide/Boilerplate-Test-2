@@ -1,5 +1,5 @@
 ---
-layout: modules/module_145/main
+layout: modules/module_145/soft
 slug: modules/module_145/preview-ui/create
 response_headers: >
   {
@@ -10,4 +10,8 @@ authorization_policies:
  - modules/siteglide_system/module_is_in_admin
 ---
 {%- include 'modules/siteglide_system/constants' -%}
-{%- include 'module_form', marketplace: 'true', id: '145', layout: 'default' -%}
+<div class="p-5">
+  <a href="/modules/module_145/preview-ui?auth={{params.auth}}" class="btn btn-primary">Back</a>
+  {%- include 'module_form', marketplace: 'true', id: '145', layout: 'default', redirect_to: "/modules/module_145/preview-ui/index?auth={{params.auth}}", enabled: 'true' -%}
+  <a href="/modules/module_145/preview-ui/index?auth={{params.auth}}" class="btn btn-primary">Cancel</a>
+</div>
