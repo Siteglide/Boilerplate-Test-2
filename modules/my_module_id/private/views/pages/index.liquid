@@ -1,0 +1,13 @@
+---
+layout: modules/<my_module_id>/main
+slug: modules/<my_module_id>/index
+response_headers: >
+  {
+    "X-Frame-Options": null,
+    "Content-Security-Policy": "frame-ancestors https://*.siteglide.com"
+  }
+authorization_policies:
+ - modules/siteglide_system/module_is_in_admin
+---
+<h1>Hello World!</h1>
+<a href="/?{% include 'modules/siteglide_system/modules/auth' -%}">Link Example</a>
