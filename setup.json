@@ -2,6 +2,7 @@
 	{
 		"id": 144,
 		"type": "module",
+		"name": "Town Hall Test",
 		"slug": "module_144",
 		"detail": false,
 		"detail_template": "templates/blank_page",
