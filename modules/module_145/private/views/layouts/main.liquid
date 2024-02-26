@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- include 'modules/siteglide_system/constants' -%}
+    {%- include 'modules/siteglide_system/siteglide_head' -%}
+    <!-- JS -->
+    {% comment %} <!-- Sitegurus SiteBuilder JS --> {% endcomment %}
+    <script defer src="https://cdn.jsdelivr.net/npm/flowbite@1.6.4/dist/flowbite.min.js"></script>
+
+    <script async id="sitegurus_forms_javascript_api" src="{{'modules/module_86/js/sitegurus_forms_javascript_api.min.js' | asset_url}}" charset="utf-8"></script>
+    <script async id="sitegurus_dark_mode_javascript_api" src="{{'modules/module_86/js/sitegurus_dark_mode_javascript_api.min.js' | asset_url}}" charset="utf-8"></script>
+    {% comment %} <!-- End Sitegurus SiteBuilder JS --> {% endcomment %}
+    <!-- Stylesheets -->
+
+    {% comment %} <!-- Dark Mode Support --> {% endcomment %}
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    {% comment %} <!-- End Dark Mode Support --> {% endcomment %}
+    {% comment %} <!-- Tailwind --> {% endcomment %}
+    {% comment %} <!--
+      If JIT is selected: then the following include powers JIT caching and <style> tag generation. The editable config file can be found in code editor under marketplace_builder/modules/{{plugin_id}}/public/views/partials/layouts/tailwind/jit_tailwind_config_v4_0_0.liquid Later versions of SiteBuilder or the theme module you're using may add newer versions of this file to the same folder, but you won't be automatically upgraded. If you want to start using a different file, pass in the "optional_path_to_jit_config" parameter. e.g. to use a file in marketplace_builder/modules/{{plugin_id}}/public/views/partials/layouts/tailwind/jit_tailwind_config_v4.0.1.liquid, you'd use: {% include 'modules/module_86/tailwind/head', optional_path_to_jit_config: 'modules/{{plugin_id}}/layouts/tailwind/jit_tailwind_config_v4.0.1' %}
+
+      If CLI is selected: this outputs the <link> tag for the compiled CSS. If you need to override this it can be done by passing a string as an "optional_path_to_cli_css" parameter e.g. to choose a CSS file at the relative path "marketplace_builder/assets/css/example.css", you'd use: {% include 'modules/module_86/tailwind/head', optional_path_to_cli_css: 'css/example.css' %}
+
+    --> {% endcomment %}
+    {% include 'modules/module_86/tailwind/head', optional_path_to_jit_config: 'modules/module_86/layouts/tailwind/jit_tailwind_config_v4_0_0', optional_path_to_cli_css: '' %}
+    {% comment %} <!-- End Tailwind --> {% endcomment %}
   </head>
   <body>
-    {{content_for_layout}}
+    <main>
+      {{ content_for_layout }}
+    </main>
   </body>
 </html>

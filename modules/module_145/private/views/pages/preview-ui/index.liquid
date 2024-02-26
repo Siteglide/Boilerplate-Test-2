@@ -9,3 +9,5 @@ response_headers: >
 authorization_policies:
  - modules/siteglide_system/module_is_in_admin
 ---
+{%- include 'modules/siteglide_system/constants' -%}
+{% include "module", marketplace: "true", id: "145", layout: "read", type: "list" %}
