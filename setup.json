@@ -1,9 +1,9 @@
 [
 	{
-		"id": 144,
+		"id": 145,
 		"type": "module",
 		"name": "Town Hall Test",
-		"slug": "module_144",
+		"slug": "module_145",
 		"detail": false,
 		"detail_template": "templates/blank_page",
 		"detail_default_layout": "default",
@@ -12,13 +12,13 @@
 		"sz_display_type": "404",
 		"use_standard_fields": false,
 		"system_fields": {
-			"module_field_144_1": {
+			"module_field_145_1": {
 				"name": "Title",
 				"type": "input_text",
 				"live": true,
 				"required": false
 			},
-			"module_field_144_2": {
+			"module_field_145_2": {
 				"name": "Description",
 				"type": "textarea",
 				"live": true,
