@@ -10,7 +10,7 @@
 		"sz": false,
 		"sz_updated": true,
 		"sz_display_type": "404",
-		"use_standard_fields": true,
+		"use_standard_fields": false,
 		"system_fields": {
 			"module_field_144_1": {
 				"name": "Title",
@@ -21,18 +21,6 @@
 			"module_field_144_2": {
 				"name": "Description",
 				"type": "textarea",
-				"live": true,
-				"required": false
-			},
-			"module_field_144_3": {
-				"name": "Image",
-				"type": "image",
-				"live": true,
-				"required": false
-			},
-			"module_field_144_4": {
-				"name": "Image Alt",
-				"type": "input_text",
 				"live": true,
 				"required": false
 			}
